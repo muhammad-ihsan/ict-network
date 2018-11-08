@@ -1,5 +1,9 @@
 description = "Default layout"
 ==
+function onStart() {
+    $this->page->site_name = env('APP_NAME');
+}
+==
 <!DOCTYPE html>
 <html>
     <head>

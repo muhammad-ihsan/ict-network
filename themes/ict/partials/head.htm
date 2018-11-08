@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-{% set _meta_title = this.page.title ? this.page.title ~ ' - ' ~ this.theme.site_name : this.theme.site_name ~ ' - ' ~ this.theme.site_description %}
+{% set _meta_title = this.page.title ? this.page.title ~ ' - ' ~ this.page.site_name : this.page.site_name ~ ' - ' ~ this.theme.site_description %}
 {% set _meta_description = this.page.description ?: this.theme.site_description %}
 {% set _meta_image = this.page.image ? this.page.image|app : this.theme.site_image ? this.theme.site_image.getThumb(1200, 630, 'crop')|app : 'meta-image.png'|media|app %}
 
