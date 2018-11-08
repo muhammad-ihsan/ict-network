@@ -7,6 +7,7 @@ use Validator;
 use Cms\Classes\ComponentBase;
 
 use Ict\Network\Models\Block;
+use Ict\Network\Models\BlockPort;
 
 class AdminBlock extends ComponentBase
 {
@@ -28,14 +29,14 @@ class AdminBlock extends ComponentBase
         $rules = [
             'computer'   => 'required',
             'switch'     => 'required',
-            'name'       => 'required',
+            'user'       => 'required',
             'started_at' => 'date',
         ];
         $messages = [];
         $attributeNames = [
             'computer'   => 'ip komputer',
             'switch'     => 'ip switch',
-            'name'       => 'nama pengguna',
+            'user'       => 'nama pengguna',
             'started_at' => 'tanggal',
         ];
 
@@ -50,9 +51,21 @@ class AdminBlock extends ComponentBase
         $block->status_id   = post('status_id');
         $block->computer    = post('computer');
         $block->switch      = post('switch');
-        $block->name        = post('name');
+        $block->name        = post('user');
         $block->reason      = post('reason');
-        $block->started_at  = post('started_at') ? post('started_at') : now();
+        $block->started_at  = post('started_at') ? post('started_at') : date('Y-m-d H:i:s');
         $block->save();
+
+        if(post('port')) {
+            for ($i=0; $i < count(post('port')) ; $i++) {
+                $blockPort           = new BlockPort;
+                $blockPort->block_id = $block->id;
+                $blockPort->port_id  = post('port')[$i];
+                $blockPort->save();
+            }
+        }
+
+        Flash::success('Block berhasil disimpan');
+        return Redirect::refresh();
     }
 }
