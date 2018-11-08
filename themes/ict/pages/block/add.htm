@@ -8,9 +8,12 @@ is_hidden = 0
 [AdminLocation]
 
 [AdminPort]
+
+[AdminStatus]
 ==
 {% set locations = AdminLocation.getAll %}
 {% set ports     = AdminPort.getAll %}
+{% set statuses  = AdminStatus.getAll %}
 <div class="card">
 	<div class="card-body">
 		<form data-request="AdminBlock::onSave" data-request-flash>
@@ -57,6 +60,9 @@ is_hidden = 0
 				<label for="">Status</label>
 				<select name="status" class="form-control">
 					<option value="">-- Pilih --</option>
+					{% for status in statuses %}
+					<option value="{{ status.id }}">{{ status.name }}</option>
+					{% endfor %}
 				</select>
 			</div>
 

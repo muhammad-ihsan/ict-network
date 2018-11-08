@@ -55,10 +55,10 @@ class Plugin extends PluginBase
         return [
             'Web\Admin\Components\AdminLocation'       => 'AdminLocation',
             'Web\Admin\Components\AdminLocationDetail' => 'AdminLocationDetail',
-
             'Web\Admin\Components\AdminPort'           => 'AdminPort',
             'Web\Admin\Components\AdminPortDetail'     => 'AdminPortDetail',
-
+            'Web\Admin\Components\AdminStatus'         => 'AdminStatus',
+            'Web\Admin\Components\AdminStatusDetail'   => 'AdminStatusDetail',
             'Web\Admin\Components\AdminBlock'          => 'AdminBlock',
             'Web\Admin\Components\AdminBlockDetail'    => 'AdminBlockDetail',
         ];
