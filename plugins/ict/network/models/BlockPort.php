@@ -4,14 +4,14 @@ use Model;
 use Ict\Core\Classes\Generator;
 
 /**
- * Status Model
+ * BlockPort Model
  */
-class Status extends Model
+class BlockPort extends Model
 {
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'ict_network_statuses';
+    public $table = 'ict_network_block_ports';
 
     /**
      * @var string The database table used by the model.

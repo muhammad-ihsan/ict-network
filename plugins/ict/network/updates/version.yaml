@@ -4,3 +4,6 @@
     - create_blocks_table.php
     - create_ports_table.php
     - create_statuses_table.php
+1.0.3:
+    - init network block port table
+    - create_block_ports_table.php
