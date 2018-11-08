@@ -28,7 +28,13 @@ class Block extends Model
      */
     public $hasOne        = [];
     public $hasMany       = [];
-    public $belongsTo     = [];
+    public $belongsTo     = [
+        'location' => [
+            'Ict\Location\Models\Location',
+            'key'      => 'location_id',
+            'otherKey' => 'id'
+        ]
+    ];
     public $belongsToMany = [];
     public $morphTo       = [];
     public $morphOne      = [];

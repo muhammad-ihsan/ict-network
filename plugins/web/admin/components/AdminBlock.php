@@ -24,6 +24,11 @@ class AdminBlock extends ComponentBase
         return [];
     }
 
+    public function getAll()
+    {
+        return Block::orderBy('created_at', 'desc')->get();
+    }
+
     public function onSave()
     {
         $rules = [
