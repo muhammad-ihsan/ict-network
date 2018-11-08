@@ -1,0 +1,3 @@
+[submodule "plugins/bantencyber"]
+	path = plugins/bantencyber
+	url = git@gitlab.com:bantencyber/plugins-core.git

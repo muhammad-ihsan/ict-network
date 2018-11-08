@@ -1,0 +1,123 @@
+.block-flex {
+    &.flex-center {
+        align-items: center;
+    }
+
+    &.flex-tablet {
+        display: block;
+
+        @media(min-width: @screen-tablet) {
+            display: flex;
+        }
+    }
+
+    &.flex-desktop {
+        display: block;
+
+        @media(min-width: @screen-desktop) {
+            display: flex;
+        }
+    }
+}
+
+.block-secondary {
+    color: #fff;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 200px;
+    .pd-b-20();
+    .bg-gradient-fade(fade(@brand-primary, 35%), fade(#000, 35%));
+}
+
+.block-introduce {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    background-position: center center;
+    background-size: cover;
+    .text-center();
+
+    .bg-gradient-fade(fade(@brand-primary, 35%), fade(#000, 35%));
+}
+
+.block-program {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 5000px;
+        height: 5000px;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        transform: rotate(-134deg);
+    }
+
+    .heading-primary {
+        .text-center();
+
+        @media(min-width: @screen-tablet) {
+            margin-top: 50px;
+            margin-bottom: -50px;
+        }
+    }
+
+    .program-outter {
+        min-height: 100vh;
+    }
+}
+
+
+.block-service {
+    background-color: #333;
+
+    .heading-primary {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #fff;
+        .text-center();
+    }
+}
+
+.navbar-relax {
+    li {
+        a {
+            .pd-t-10();
+            .pd-b-10();
+            .pd-l-20();
+            .pd-r-20();
+            margin-top: 15px;
+            background-color: #fff;
+            color: #000 !important;
+            border-radius: 40px;
+        }
+
+        &:hover,
+        &:focus {
+            a {
+                color: #000 !important;
+                background-color: #fff !important;
+            }
+        }
+    }
+}
+
+.nav-about {
+    background-color: #fafafa;
+
+    li {
+        a {
+            border-left: 10px solid transparent;
+        }
+
+        &.active {
+            a {
+                border-left: 10px solid darken(@brand-primary, 10%);
+            }
+        }
+    }
+}

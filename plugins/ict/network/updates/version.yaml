@@ -1,0 +1,6 @@
+1.0.1: First version of Network
+1.0.2:
+    - init network base table
+    - create_blocks_table.php
+    - create_ports_table.php
+    - create_statuses_table.php

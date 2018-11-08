@@ -1,0 +1,32 @@
+title = "Team"
+url = "/about/team"
+layout = "default"
+is_hidden = 0
+
+==
+function onStart() {
+    $this->page->isSecondaryFooter = true;
+    $this->page->aboutNavigation = 'team';
+}
+==
+<div class="block block-secondary" style="background-image: url('https://unsplash.it/1200/1200')">
+    <div class="container">
+        <div class="title">
+            <h1>{{ this.page.title|upper }}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container mg-t-40 mg-b-40">
+    <div class="row">
+        <div class="col-md-4">
+            {% partial 'nav-profile' %}
+        </div>
+
+        <div class="col-md-8">
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quibusdam, omnis itaque atque earum quos ut corrupti, numquam maxime modi vitae dolorum consectetur dolorem optio quae nam quod aliquam. Eius?
+            </p>
+        </div>
+    </div>
+</div>

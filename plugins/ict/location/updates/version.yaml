@@ -1,0 +1,4 @@
+1.0.1: First version of Location
+1.0.2:
+      - init location base table
+      - create_locations_table.php

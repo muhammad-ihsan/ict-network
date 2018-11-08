@@ -1,0 +1,44 @@
+title     = "Daftar Lokasi"
+url       = "/location"
+layout    = "default"
+is_hidden = 0
+
+[AdminLocation]
+==
+
+{% set locations = AdminLocation.getAll %}
+<div class="card">
+	<div class="card-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Nama</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for location in locations %}
+				<tr>
+					<td>{{ location.name }}</td>
+					<td class="text-right">
+						<div class="dropdown">
+							<button type="button" class="btn btn-secondary btn-xs dropdown-toggle" data-toggle="dropdown">
+								Pilihan
+							</button>
+							<div class="dropdown-menu pull-right">
+								<a class="dropdown-item" href="#">
+									<i class="fa fa-reply fa-fw"></i> Ubah
+								</a>
+								<a class="dropdown-item" href="#">
+									<i class="fa fa-trash fa-fw"></i> Hapus
+								</a>
+	                        </div>
+						</div>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>

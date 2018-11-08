@@ -1,0 +1,41 @@
+title = "Program"
+url = "/about/program"
+layout = "default"
+is_hidden = 0
+
+[BaseProgram]
+==
+function onStart() {
+    $this->page->isSecondaryFooter = true;
+    $this->page->aboutNavigation = 'program';
+}
+==
+{% set programs = BaseProgram.getAll %}
+{% partial 'block-secondary' %}
+<div class="container mg-t-40 mg-b-40">
+    <div class="row">
+        <div class="col-md-4">
+            {% partial 'nav-profile' %}
+        </div>
+
+        <div class="col-md-8">
+            {% for program in programs %}
+            <div class="mg-b-40">
+                <div class="page-header mg-t-0">
+                    <h3 class="mg-t-0">{{ program.name|upper }}</h3>
+                </div>
+                <div class="text-content">
+                    {{ program.content|raw }}
+                </div>
+                {% if program.link %}
+                <div class="mg-t-10">
+                    <a href="{{ program.link }}" target="_blank" class="btn btn-primary">
+                        <i class="fa fa-file-pdf-o fa-fw"></i> UNDUH PROPOSAL
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+title     = "Buat Daftar Blokir"
+url       = "/block/add"
+layout    = "default"
+is_hidden = 0
+
+[AdminBlock]
+
+[AdminLocation]
+
+[AdminPort]
+==
+{% set locations = AdminLocation.getAll %}
+{% set ports     = AdminPort.getAll %}
+<div class="card">
+	<div class="card-body">
+		<form data-request="AdminBlock::onSave" data-request-flash>
+			<div class="form-group">
+				<label for="">Lokasi</label>
+				<select name="location_id" class="form-control">
+					<option value="">-- Pilih --</option>
+					{% for location in locations %}
+					<option value="{{ location.id }}">{{ location.name }}</option>
+					{% endfor %}
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="">IP Komputer</label>
+				<input type="text" class="form-control" name="computer">
+			</div>
+
+			<div class="form-group">
+				<label for="">IP Switch</label>
+				<input type="text" class="form-control" name="switch">
+			</div>
+
+			<div class="form-group">
+				<label for="">Nama</label>
+				<input type="text" class="form-control" name="user">
+			</div>
+
+			<div class="form-group">
+				<label for="">Port</label>
+				<select name="port" class="form-control" multiple>
+					{% for port in ports %}
+					<option value="{{ port.id }}">{{ port.name }}</option>
+					{% endfor %}
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="">Alasan</label>
+				<textarea name="reason" cols="30" rows="10" class="form-control"></textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="">Status</label>
+				<select name="status" class="form-control">
+					<option value="">-- Pilih --</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label>&nbsp;</label>
+				<button class="btn btn-primary btn-block" data-attach-loading>BUAT</button>
+			</div>
+		</form>
+	</div>
+</div>
