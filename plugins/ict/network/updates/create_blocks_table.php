@@ -11,8 +11,8 @@ class CreateBlocksTable extends Migration
         Schema::create('ict_network_blocks', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('location_id')->nullable();
-            $table->integer('status_id')->nullable();
+            $table->integer('location_id')->nullable()->deafult(0);
+            $table->integer('status_id')->nullable()->deafult(0);
             $table->string('computer')->nullable();
             $table->string('switch')->nullable();
             $table->string('name')->nullable();
