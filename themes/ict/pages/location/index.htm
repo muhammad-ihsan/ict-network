@@ -1,5 +1,5 @@
 title     = "Daftar Lokasi"
-url       = "/location"
+url       = "/admin/location"
 layout    = "default"
 is_hidden = 0
 
@@ -9,7 +9,14 @@ is_hidden = 0
 {% set locations = AdminLocation.getAll %}
 <div class="card">
 	<div class="card-body">
-		<table class="table">
+		<table class="table datatable">
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+
 			<thead>
 				<tr>
 					<th>Nama</th>

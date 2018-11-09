@@ -1,5 +1,12 @@
-title = "Home"
-url = "/"
-layout = "default"
+title     = "Daftar Blokir"
+url       = "/"
+layout    = "public"
 is_hidden = 0
+
+[BaseBlock]
 ==
+<div class="card">
+	<div class="card-body">
+		{% partial 'block/table-block' blocks=blocks %}
+	</div>
+</div>

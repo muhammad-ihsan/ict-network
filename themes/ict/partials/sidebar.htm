@@ -7,7 +7,7 @@
             <img src="{{ 'assets/sb/images/faces/face1.jpg'|theme }}" alt="profile image">
           </div>
           <div class="text-wrapper">
-            <p class="profile-name">Richard V.Welsh</p>
+            <p class="profile-name">{{ userLogin.name ? userLogin.name : userLogin.email }}</p>
             <div>
               <small class="designation text-muted">Manager</small>
               <span class="status-indicator online"></span>
