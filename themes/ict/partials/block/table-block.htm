@@ -27,6 +27,7 @@
 			<td>{{ block.location ? block.location.name : 'Belum ada lokasi' }}</td>
 			<td>{{ block.user }}</td>
 			<td class="text-right">
+				{% if userLogin %}
 				<div class="dropdown">
 					<button type="button" class="btn btn-secondary btn-xs dropdown-toggle" data-toggle="dropdown">
 						Pilihan
@@ -40,6 +41,12 @@
 						</a>
                     </div>
 				</div>
+				{% else %}
+				<a href="{{ 'block/detail'|page({parameter: block.parameter}) }}" class="btn btn-secondary btn-xs dropdown-toggle" data-toggle="dropdown">
+					Lihat
+				</a>
+				{% endif %}
+
 			</td>
 		</tr>
 		{% endfor %}

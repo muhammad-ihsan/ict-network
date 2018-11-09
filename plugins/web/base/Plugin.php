@@ -53,7 +53,8 @@ class Plugin extends PluginBase
         // return []; // Remove this line to activate
 
         return [
-            'Web\Base\Components\BaseBlock' => 'BaseBlock',
+            'Web\Base\Components\BaseBlock'       => 'BaseBlock',
+            'Web\Base\Components\BaseBlockDetail' => 'BaseBlockDetail',
         ];
     }
 
