@@ -8,7 +8,17 @@ is_hidden = 0
 {% set blocks = AdminBlock.getAll %}
 <div class="card">
 	<div class="card-body">
-		<table class="table">
+		<table class="table datatable">
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+
 			<thead>
 				<tr>
 					<th>Komputer</th>

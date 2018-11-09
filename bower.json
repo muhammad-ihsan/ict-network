@@ -12,9 +12,13 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "3.*",
+    "bootstrap": "4.*",
     "jquery": "2.*",
     "fastclick": "1.*",
-    "font-awesome": "4.*"
+    "font-awesome": "4.*",
+    "compass-mixins": "^1.0.2",
+    "mdi": "^3.0.39",
+    "select2": "^4.0.5",
+    "datatables.net-bs4": "^3.2.2"
   }
 }

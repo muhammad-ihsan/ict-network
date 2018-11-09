@@ -44,9 +44,39 @@ function onStart() {
             'assets/js/misc.js',
             'assets/js/dashboard.js',
 
-            '../../bower_components/fastclick/lib/fastclick.js',
+            '~/bower_components/fastclick/lib/fastclick.js',
+            '~/bower_components/select2/dist/js/select2.min.js',
+            '~/bower_components/datatables.net/js/jquery.dataTables.min.js',
+            '~/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
 
             'assets/js/app.js']|theme }}"></script>
+
+        <script>
+        $(document).ready(function(){
+            $('.datatable tfoot th').each(function () {
+                var title = $(this).text();
+                $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />');
+            });
+
+            $('.datatable tfoot th').last().find('input').addClass('hidden');
+
+            // DataTable
+            var table = $('.datatable').DataTable();
+
+            // Apply the search
+            table.columns().every( function () {
+                var that = this;
+
+                $( 'input', this.footer() ).on( 'keyup change', function () {
+                    if ( that.search() !== this.value ) {
+                        that
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+            } );
+        })
+        </script>
 
         {% scripts %}
 

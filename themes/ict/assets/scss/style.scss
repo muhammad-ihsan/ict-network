@@ -56,72 +56,71 @@
 /*-------------------------------------------------------------------*/
 
 /* === Import Bootstrap functions and variables === */
+@import "../../../../bower_components/bootstrap/scss/bootstrap";
 
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
 /*-------------------------------------------------------------------*/
 
 /* === Import template variables === */
 
-@import "variables";
+@import "_variables";
 /*-------------------------------------------------------------------*/
 
 /* === SCSS Compass Functions === */
 
-@import "../node_modules/compass-mixins/lib/compass";
-@import "../node_modules/compass-mixins/lib/animate";
+@import "../../../../bower_components/compass-mixins/lib/compass";
+@import "../../../../bower_components/compass-mixins/lib/animate";
 /*-------------------------------------------------------------------*/
 
 /* === Boostrap Main SCSS === */
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../../../bower_components/bootstrap/scss/bootstrap";
 /*-------------------------------------------------------------------*/
 
 /* === Template mixins === */
 
-@import "mixins/animation";
-@import "mixins/background";
-@import "mixins/blockqoute";
-@import "mixins/badges";
-@import "mixins/buttons";
-@import "mixins/cards";
-@import "mixins/misc";
-@import "mixins/text";
+@import "mixins/_animation";
+@import "mixins/_background";
+@import "mixins/_blockqoute";
+@import "mixins/_badges";
+@import "mixins/_buttons";
+@import "mixins/_cards";
+@import "mixins/_misc";
+@import "mixins/_text";
 /*-------------------------------------------------------------------*/
 
 /* === Core Styles === */
 
-@import "reset";
-@import "fonts";
-@import "functions";
-@import "sidebar";
-@import "navbar";
-@import "typography";
-@import "misc";
-@import "footer";
-@import "utilities";
-@import "demo";
-@import "dashboard";
+@import "_reset";
+@import "_fonts";
+@import "_functions";
+@import "_sidebar";
+@import "_navbar";
+@import "_typography";
+@import "_misc";
+@import "_footer";
+@import "_utilities";
+@import "_demo";
+@import "_dashboard";
 /*-------------------------------------------------------------------*/
 
 /* === Components === */
 
-@import "components/badges";
-@import "components/bootstrap-progress";
-@import "components/buttons";
-@import "components/cards";
-@import "components/checkbox-radio";
-@import "components/dropdown";
-@import "components/forms";
-@import "components/icons";
-@import "components/lists";
-@import "components/nav";
-@import "components/new-account";
-@import "components/preview";
-@import "components/tables";
+@import "components/_badges";
+@import "components/_bootstrap-progress";
+@import "components/_buttons";
+@import "components/_cards";
+@import "components/_checkbox-radio";
+@import "components/_dropdown";
+@import "components/_forms";
+@import "components/_icons";
+@import "components/_lists";
+@import "components/_nav";
+@import "components/_new-account";
+@import "components/_preview";
+@import "components/_tables";
 /*-------------------------------------------------------------------*/
 
 /* === Landing screens === */
 
-@import "landing-screens/auth";
-@import "landing-screens/error";
+@import "landing-screens/_auth";
+@import "landing-screens/_error";

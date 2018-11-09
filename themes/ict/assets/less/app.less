@@ -1,6 +1,8 @@
 //
 // Load all required stylesheets
 //
+@import '_helpers';
+
 .navbar-brand {
 	.brand-logo {
 		img {
@@ -8,4 +10,33 @@
 			height: 35px;
 		}
 	}
+}
+
+.select2-selection {
+	border-radius: 0px !important;
+}
+
+.form-group {
+	.mg-b-30();
+}
+
+.table {
+    tfoot {
+        display: table-header-group;
+    }
+}
+
+.hidden {
+	display: none !important;
+}
+
+.dataTables_wrapper {
+	.row {
+		width: 100%;
+	}
+}
+
+.dataTables_length,
+.dataTables_filter {
+	display: none;
 }

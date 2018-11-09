@@ -8,6 +8,10 @@ $(document).ready(function() {
         container: 'body',
     });
 
+    $('select.form-control').select2({
+    	"theme": "bootstrap"
+    });
+
     // Add your own custom script
     // ...
 });
